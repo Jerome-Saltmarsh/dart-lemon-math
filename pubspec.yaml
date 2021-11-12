@@ -1,6 +1,6 @@
 name: lemon_math
 description: A utility library for making 2d games
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/Jerome-Saltmarsh/dart-lemon-math
 
 environment:
