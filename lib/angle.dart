@@ -6,7 +6,7 @@ import 'pi2.dart';
 double angle(double adjacent, double opposite) {
   if (adjacent < 0)
   {
-    return pi2 - (atan2(adjacent, opposite)  *  -1);
+    return -atan2(adjacent, opposite);
   }
-  return atan2(adjacent, opposite);
+  return pi2 - atan2(adjacent, opposite);
 }
