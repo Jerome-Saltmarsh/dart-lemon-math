@@ -1,5 +1,5 @@
 
-import 'package:dart_lemon_math/clamp.dart';
+import 'clamp.dart';
 
 double clamp01(double value){
   return clamp(value, 0, 1);
