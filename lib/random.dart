@@ -1,3 +1,3 @@
 import 'dart:math';
 
-Random random = Random();
+final random = Random();
