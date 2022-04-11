@@ -14,6 +14,12 @@ class Vector2 {
     return sqrt((a * a) + (b * b));
   }
 
+  double getDistanceXY(double x, double y) {
+    final a = this.x - x;
+    final b = this.y - y;
+    return sqrt((a * a) + (b * b));
+  }
+
   double getAngle(Vector2 other) {
     const pi2 = pi * 2;
     final adjacent = x - other.x;
