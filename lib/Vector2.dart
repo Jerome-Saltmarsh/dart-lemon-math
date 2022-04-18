@@ -35,8 +35,25 @@ class Vector2 {
     y -= sin(angle + piHalf) * distance;
   }
 
+  double getPositionX(double angle, double distance) {
+    const piHalf = pi * 0.5;
+    return x - (cos(angle + piHalf) * distance);
+  }
+
+  double getPositionY(double angle, double distance) {
+    const piHalf = pi * 0.5;
+    return y - (sin(angle + piHalf) * distance);
+  }
+
   double get length {
     return sqrt((x * x) + (y * y));
+  }
+
+  void rotateAround(Vector2 that, double angle) {
+    final moveDistance = getDistance(that);
+    final moveAngle = that.getAngle(this) + angle;
+    x = that.getPositionX(moveAngle, moveDistance);
+    y = that.getPositionY(moveAngle, moveDistance);
   }
 }
 
