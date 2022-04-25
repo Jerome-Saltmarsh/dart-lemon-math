@@ -2,13 +2,16 @@
 import 'distance_between.dart';
 import 'dart:math';
 
-class Vector2 {
-  double x;
-  double y;
-  Vector2(this.x, this.y);
+import 'pi2.dart';
+import 'piHalf.dart';
+
+mixin Position {
+  var x = 0.0;
+  var y = 0.0;
+
   bool get isZero => x == 0 && y == 0;
 
-  double getDistance(Vector2 other) {
+  double getDistance(Position other) {
     final a = x - other.x;
     final b = y - other.y;
     return sqrt((a * a) + (b * b));
@@ -20,8 +23,7 @@ class Vector2 {
     return sqrt((a * a) + (b * b));
   }
 
-  double getAngle(Vector2 other) {
-    const pi2 = pi * 2;
+  double getAngle(Position other) {
     final adjacent = x - other.x;
     if (adjacent < 0) {
       return -atan2(adjacent, y - other.y);
@@ -29,19 +31,20 @@ class Vector2 {
     return pi2 - atan2(adjacent, y - other.y);
   }
 
+  void moveTowards(Position that, double distance){
+    move(getAngle(that), distance);
+  }
+
   void move(double angle, double distance) {
-    const piHalf = pi * 0.5;
     x -= cos(angle + piHalf) * distance;
     y -= sin(angle + piHalf) * distance;
   }
 
   double getPositionX(double angle, double distance) {
-    const piHalf = pi * 0.5;
     return x - (cos(angle + piHalf) * distance);
   }
 
   double getPositionY(double angle, double distance) {
-    const piHalf = pi * 0.5;
     return y - (sin(angle + piHalf) * distance);
   }
 
@@ -49,7 +52,7 @@ class Vector2 {
     return sqrt((x * x) + (y * y));
   }
 
-  void rotateAround(Vector2 that, double angle) {
+  void rotateAround(Position that, double angle) {
     final moveDistance = getDistance(that);
     final moveAngle = that.getAngle(this) + angle;
     x = that.getPositionX(moveAngle, moveDistance);
@@ -57,7 +60,14 @@ class Vector2 {
   }
 }
 
-T findClosest<T extends Vector2>(List<T> values, double x, double y){
+class Vector2 with Position {
+  Vector2(double x, double y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+T findClosest<T extends Position>(List<T> values, double x, double y){
   if (values.isEmpty){
     throw Exception("findClosest.error.values is empty");
   }
