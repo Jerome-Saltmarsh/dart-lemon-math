@@ -1,9 +1,9 @@
 import 'dart:math';
 
-import 'pi2.dart';
+import 'constants.dart';
 
 /// radians
-double angle(double adjacent, double opposite) {
+double getAngle(double adjacent, double opposite) {
   if (adjacent < 0)
   {
     return -atan2(adjacent, opposite);

@@ -1,8 +1,10 @@
 import 'dart:math';
 
-import 'piHalf.dart';
+import 'constants.dart';
+
+
 
 /// Angle in radians
-double adjacent(double angle, double magnitude){
+double getAdjacent(double angle, double magnitude){
   return -cos(angle + piHalf) * magnitude;
 }

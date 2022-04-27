@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'piHalf.dart';
+import 'constants.dart';
 
 double opposite(double angle, double magnitude) {
   return -sin(angle + piHalf) * magnitude;

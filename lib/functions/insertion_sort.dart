@@ -1,10 +1,10 @@
 
-void insertionSort<E>({
-  required List<E> list,
+void insertionSort<E>(List<E> list, {
   required int Function(E, E) compare,
   int start = 0,
-  required int end
+  int? end,
 }) {
+  end ??= list.length;
   for (var pos = start + 1; pos < end; pos++) {
     var min = start;
     var max = pos;
