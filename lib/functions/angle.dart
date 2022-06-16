@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'constants.dart';
+import '../constants/pi2.dart';
 
 /// radians
 double getAngle(double adjacent, double opposite) {

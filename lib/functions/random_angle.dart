@@ -1,4 +1,5 @@
-import 'constants.dart';
+import 'package:lemon_math/constants/pi2.dart';
+
 import 'random.dart';
 
 double randomAngle(){

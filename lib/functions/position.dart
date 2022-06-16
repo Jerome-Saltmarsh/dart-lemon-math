@@ -1,7 +1,8 @@
 
 import 'dart:math';
 
-import 'constants.dart';
+import 'package:lemon_math/constants/pi2.dart';
+import 'package:lemon_math/constants/pi_half.dart';
 
 mixin Position {
   var x = 0.0;

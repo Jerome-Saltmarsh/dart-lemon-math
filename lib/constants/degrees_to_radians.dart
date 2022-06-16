@@ -1,0 +1,1 @@
+const degreesToRadians = 0.0174533;
