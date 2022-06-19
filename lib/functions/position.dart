@@ -3,6 +3,7 @@ import 'dart:math';
 
 import 'package:lemon_math/constants/pi2.dart';
 import 'package:lemon_math/constants/pi_half.dart';
+import 'package:lemon_math/functions/angle_between.dart';
 
 mixin Position {
   var x = 0.0;
@@ -22,16 +23,12 @@ mixin Position {
     return sqrt((a * a) + (b * b));
   }
 
-  double getAngle(Position other) {
-    final adjacent = x - other.x;
-    if (adjacent < 0) {
-      return -atan2(adjacent, y - other.y);
-    }
-    return pi2 - atan2(adjacent, y - other.y);
-  }
-
   void moveTowards(Position that, double distance){
     move(getAngle(that), distance);
+  }
+
+  double getAngle(Position other) {
+    return getAngleBetween(x, y, other.x, other.y);
   }
 
   void move(double angle, double distance) {

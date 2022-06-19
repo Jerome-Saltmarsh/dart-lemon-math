@@ -4,9 +4,9 @@ import '../constants/pi2.dart';
 
 /// radians
 double getAngle(double adjacent, double opposite) {
-  if (adjacent < 0)
-  {
-    return -atan2(adjacent, opposite);
+  final angle = atan2(opposite, adjacent);
+  if (angle < 0){
+    return pi2 + angle;
   }
-  return pi2 - atan2(adjacent, opposite);
+  return angle;
 }
