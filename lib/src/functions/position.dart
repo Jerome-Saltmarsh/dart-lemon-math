@@ -1,13 +1,13 @@
 
 import 'dart:math';
 
-import 'package:lemon_math/constants/pi2.dart';
-import 'package:lemon_math/constants/pi_half.dart';
-import 'package:lemon_math/functions/angle_between.dart';
+import 'package:lemon_math/src.dart';
 
 mixin Position {
   var x = 0.0;
   var y = 0.0;
+
+  double get sum => x + y;
 
   bool get isZero => x == 0 && y == 0;
 
