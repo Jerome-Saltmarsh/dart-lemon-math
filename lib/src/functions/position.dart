@@ -28,7 +28,7 @@ mixin Position {
   }
 
   double getAngle(Position other) {
-    return getAngleBetween(x, y, other.x, other.y);
+    return angleBetween(x, y, other.x, other.y);
   }
 
   void move(double angle, double distance) {
