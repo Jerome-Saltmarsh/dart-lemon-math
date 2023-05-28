@@ -30,3 +30,5 @@ export 'src/constants/pi_quarter.dart';
 export 'src/constants/radians_to_degrees.dart';
 export 'src/ease.dart';
 export 'src/functions/hsv_to_color.dart';
+export 'src/functions/interpolate.dart';
+export 'src/functions/interpolate_double.dart';
