@@ -28,3 +28,5 @@ export 'src/constants/pi_eighth.dart';
 export 'src/constants/pi_half.dart';
 export 'src/constants/pi_quarter.dart';
 export 'src/constants/radians_to_degrees.dart';
+export 'src/ease.dart';
+export 'src/functions/hsv_to_color.dart';
