@@ -1,7 +1,6 @@
 library lemon_math;
 
 export 'src/functions/adj.dart';
-export 'src/functions/angle.dart';
 export 'src/functions/angle_between.dart';
 export 'src/functions/clamp.dart';
 export 'src/functions/clamp01.dart';
@@ -9,7 +8,8 @@ export 'src/functions/clamp_angle.dart';
 export 'src/functions/diff.dart';
 export 'src/functions/distance_between.dart';
 export 'src/functions/give_or_take.dart';
-export 'src/functions/hyp.dart';
+export 'src/functions/hyp2.dart';
+export 'src/functions/hyp3.dart';
 export 'src/functions/insertion_sort.dart';
 export 'src/functions/normalize.dart';
 export 'src/functions/opp.dart';
@@ -32,3 +32,4 @@ export 'src/ease.dart';
 export 'src/functions/hsv_to_color.dart';
 export 'src/functions/interpolate.dart';
 export 'src/functions/interpolate_double.dart';
+export 'src/functions/rad.dart';

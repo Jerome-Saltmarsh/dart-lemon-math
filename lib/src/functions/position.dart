@@ -11,25 +11,17 @@ mixin Position {
 
   bool get isZero => x == 0 && y == 0;
 
-  double getDistance(Position other) {
-    final a = x - other.x;
-    final b = y - other.y;
-    return sqrt((a * a) + (b * b));
-  }
+  double getDistance(Position other) =>
+      getDistanceXY(other.x, other.y);
 
-  double getDistanceXY(double x, double y) {
-    final a = this.x - x;
-    final b = this.y - y;
-    return sqrt((a * a) + (b * b));
-  }
+  double getDistanceXY(double x, double y) =>
+      distanceBetween(this.x, this.y, x, y);
 
-  void moveTowards(Position that, double distance){
-    move(getAngle(that), distance);
-  }
+  void moveTowards(Position that, double distance) =>
+      move(getAngle(that), distance);
 
-  double getAngle(Position other) {
-    return angleBetween(x, y, other.x, other.y);
-  }
+  double getAngle(Position other) =>
+      angleBetween(x, y, other.x, other.y);
 
   void move(double angle, double distance) {
     x -= cos(angle + piHalf) * distance;
