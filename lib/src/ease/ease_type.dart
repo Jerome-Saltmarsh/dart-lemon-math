@@ -1,0 +1,23 @@
+enum EaseType {
+  In_Sine,
+  Out_Sine,
+  In_Out_Sine,
+  In_Quad,
+  Out_Quad,
+  In_Out_Quad,
+  In_Cubic,
+  Out_Cubic,
+  In_Out_Cubic,
+  In_Quart,
+  Out_Quart,
+  In_Out_Quart,
+  In_Quint,
+  Out_Quint,
+  In_Out_Quint,
+  In_Expo,
+  Out_Expo,
+  In_Out_Expo,
+  In_Circ,
+  Out_Circ,
+  In_Out_Circ
+}

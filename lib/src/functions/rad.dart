@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:lemon_math/src.dart';
+import '../constants/pi2.dart';
 
 
 /// measures the angle in radians of a triangle

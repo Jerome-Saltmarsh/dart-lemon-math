@@ -1,4 +1,4 @@
-import 'package:lemon_math/src/constants/pi2.dart';
+import '../constants/pi2.dart';
 
 double clampAngle(double angle) {
   if (angle < 0) return (pi2 - (-angle % pi2)) % pi2;

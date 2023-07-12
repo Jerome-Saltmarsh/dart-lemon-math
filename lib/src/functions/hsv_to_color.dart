@@ -60,3 +60,10 @@ int hsvToColor({
 
   return (opacity & 0xff) << 24 | (red & 0xff) << 16 | (green & 0xff) << 8 | (blue & 0xff);
 }
+
+class BinaryToHex {
+    static const V00000000 = 0x00;
+    static const V00000001 = 0x01;
+    // add missing values here
+    static const V11111111 = 0xff;
+}
