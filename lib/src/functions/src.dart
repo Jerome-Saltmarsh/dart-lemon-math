@@ -17,6 +17,7 @@ export 'insertion_sort.dart';
 export 'interpolate.dart';
 export 'interpolate_double.dart';
 export 'is_left.dart';
+export 'linear_interpolate_int.dart';
 export 'normalize.dart';
 export 'opp.dart';
 export 'rad.dart';

@@ -7,3 +7,4 @@ export 'random_between.dart';
 export 'random_bool.dart';
 export 'random_int.dart';
 export 'random_item.dart';
+export 'random_chance.dart';
