@@ -1,5 +1,8 @@
-
-/// @t a decimal between 0 and 1
-int interpolate({required int start, required int end, required double t}) =>
-    (start * (1.0 - t) + end * t).toInt();
-
+T interpolate<T extends num>(
+  T start,
+  T end,
+  double t,
+) {
+  final value = (start * (1.0 - t) + end * t);
+  return ((T == int) ? (value.toInt()) : value) as T;
+}
