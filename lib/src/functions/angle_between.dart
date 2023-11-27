@@ -1,4 +1,4 @@
-import 'package:lemon_math/src.dart';
+import 'rad.dart';
 
 /// Returns the angle in radians between two positions
 double angleBetween(double x1, double y1, double x2, double y2) =>
