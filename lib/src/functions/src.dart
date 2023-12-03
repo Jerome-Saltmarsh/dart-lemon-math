@@ -39,6 +39,7 @@ export 'get_green.dart';
 export 'get_red.dart';
 export 'get_rgb.dart';
 export 'interpolate_byte.dart';
+export 'interpolate_byte_cyclic.dart';
 export 'interpolate_colors.dart';
 export 'pyramid.dart';
 export 'set_alpha.dart';

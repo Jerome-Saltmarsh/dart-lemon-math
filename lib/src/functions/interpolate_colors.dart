@@ -1,5 +1,3 @@
-
-
 import 'get_red.dart';
 import 'get_green.dart';
 import 'get_blue.dart';
