@@ -1,36 +1,31 @@
 
 
-
+import 'get_red.dart';
+import 'get_green.dart';
+import 'get_blue.dart';
 import 'get_alpha.dart';
 import 'rgba.dart';
 import 'interpolate.dart';
 
 int interpolateColors(int colorA, int colorB, double i) {
+  assert (i >= 0 && i <= 1.0);
 
-  if (i < 0.0 || i > 1.0) {
-    throw ArgumentError('Parameter "i" must be between 0 and 1 inclusive.');
-  }
+  final redA = getRed(colorA);
+  final greenA = getGreen(colorA);
+  final blueA = getBlue(colorA);
 
-  final redA = (colorA >> 16) & 0xFF;
-  final greenA = (colorA >> 8) & 0xFF;
-  final blueA = colorA & 0xFF;
+  final redB = getRed(colorB);
+  final greenB = getGreen(colorB);
+  final blueB = getBlue(colorB);
 
-  final redB = (colorB >> 16) & 0xFF;
-  final greenB = (colorB >> 8) & 0xFF;
-  final blueB = colorB & 0xFF;
-
-  final colorAAlpha = getAlpha(colorA);
-  final colorBAlpha = getAlpha(colorB);
-
-  final interpolatedRed = (redA + (i * (redB - redA))).round();
-  final interpolatedGreen = (greenA + (i * (greenB - greenA))).round();
-  final interpolatedBlue = (blueA + (i * (blueB - blueA))).round();
+  final alphaA = getAlpha(colorA);
+  final alphaB = getAlpha(colorB);
 
   return rgba(
-    r: interpolatedRed,
-    g: interpolatedGreen,
-    b: interpolatedBlue,
-    a: interpolate(colorAAlpha, colorBAlpha, i).toInt(),
+    r: interpolate(redA, redB, i).toInt(),
+    g: interpolate(greenA, greenB, i).toInt(),
+    b: interpolate(blueA, blueB, i).toInt(),
+    a: interpolate(alphaA, alphaB, i).toInt(),
   );
 }
 
