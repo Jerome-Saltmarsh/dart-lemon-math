@@ -1,6 +1,4 @@
 
 import 'random.dart';
 
-T randomItem<T>(List<T> list) {
-  return list[random.nextInt(list.length)];
-}
+T randomItem<T>(Iterable<T> list) => list.elementAt(random.nextInt(list.length));
