@@ -1,10 +1,10 @@
 library;
 
+export 'inverse_proportion.dart';
 export 'adj.dart';
 export 'angle_between.dart';
 export 'angle_diff.dart';
 export 'clamp.dart';
-export 'clamp01.dart';
 export 'clamp_angle.dart';
 export 'diff.dart';
 export 'distance_between.dart';
